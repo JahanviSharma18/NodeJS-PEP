@@ -3,7 +3,7 @@ const app= express();
 app.listen(8070,()=>{
     console.log("Server Started");
 });
-app.get("/:id/:id1/:id2/:id3", (req, res) => {
+app.get("/a/:id1/:id2/:id3", (req, res) => {
     console.log(req.url);
     console.log(req.params);
     res.send("hello students");
