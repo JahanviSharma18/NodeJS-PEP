@@ -10,6 +10,9 @@ app.get("/home",(req,res)=>{
 })
 app.get("/home/page1",(req,res)=>{
     console.log(req.url)
+    console.log(req.method)
+    console.log(req.body)
+    console.log(req.headers.authorization)
     res.send("response for server from /home/page1")
 })
 app.listen(8070,()=>{
