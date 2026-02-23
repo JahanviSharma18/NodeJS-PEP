@@ -1,9 +1,6 @@
-import express from 'express'
-const app=express()
-app.listen(8070,()=>{console.log("server started")});
-const userRouter = express.Router()
-userRouter.get("/",(req,res)=>{
-    res.send("this is get request of user router")})
-userRouter.post("/",(req,res)=>{
-    res.send("this is post request of user router")})
+import express from "express";
+import { createUser, getUsers } from "../controllers/userController.js";
+const userRouter = express.Router();
+userRouter.get("/", getUsers);
+userRouter.post("/", createUser);
 export default userRouter;
